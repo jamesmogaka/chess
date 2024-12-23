@@ -1,0 +1,37 @@
+/* The style of the chessboard */
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 650px;
+    height: 650px;
+    background-color: blue;
+}
+
+/* The style of each cell */
+.cell {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'a b c';
+}
+
+/* Dark cell */
+.dark {
+    color: rgb(233, 237, 204);
+    background-color: rgb(119, 153, 84);
+}
+
+/* White cell */
+.light {
+    color: rgb(119, 153, 84);
+    background-color: rgb(233, 237, 204);
+}
+
+/* show the file label last in the cell grid */
+.file_label {
+    grid-area: c;
+    align-self: end;
+    padding: 0;
+    margin: 0;
+}
